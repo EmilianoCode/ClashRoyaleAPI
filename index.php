@@ -45,6 +45,7 @@
     //echo $res;
     //echo $data["name"];
     echo '<div style="width:90%; background:lightblue; display:flex; flex-direction:column; margin:auto; padding:30px; box-sizing:border-box; border-radius: 20px;">';
+    echo '<h1>SAPEEEEEEEEEEEEEEEEEEEEEEEEEEE</h1>';
     echo '<h3 style="font-family:Open Sans; font-size: 23px;"> Jugador: '.$data["name"].'</h3>';
     echo '<h3 style="font-family:Open Sans; font-size: 23px;"> Experiencia: '.$data["expLevel"].'</h3>';
     echo '<h3 style="font-family:Open Sans; font-size: 23px;"> Trofeos: '.$data["trophies"].'</h3>';
