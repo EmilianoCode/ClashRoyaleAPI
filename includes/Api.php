@@ -26,7 +26,7 @@
             curl_setopt($curl_handle, CURLOPT_SSL_VERIFYPEER, false);
             curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
 
-            $result = curl_exec($$curl_handle);
+            $result = curl_exec($curl_handle);
             $data = json_decode($result,1);
 
             curl_close($curl_handle);
