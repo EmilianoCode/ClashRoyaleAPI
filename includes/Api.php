@@ -1,6 +1,6 @@
 <?php
 
-    //namespace ClashRoyaleAPI\includes;
+    namespace ClashRoyaleAPI\includes;
 
     class Api {
 

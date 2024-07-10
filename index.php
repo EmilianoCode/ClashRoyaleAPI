@@ -10,43 +10,17 @@
     </title>
 </head>
 <body>
-  <?php
-    /*$token = getenv("CRA-TOKEN");
-    
-    $url = "https://api.clashroyale.com/v1/players/%238RYPQ9RQG";
-    
-    $ch = curl_init($url);
-    
-    $headr = array();
-    $headr[] = "Accept: application/json";
-    $headr[] = "Authorization: Bearer ".$token;
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $headr);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    $res = curl_exec($ch);*/
-
-    //$tojson = json_encode($res);
-    
-    /*$data = json_decode($res,1);
-    curl_close($ch);
-    echo "<h3>".$data["reason"]."</h3>";*/
-    ?>
     <?php 
+    header('Content-Type: text/html; charset=UTF-8');
 
-    echo '<h4>paso1</h4>';
-    header('Content-Type: text/html; charset=UTF-8'); 
-
-    echo '<h4>paso2</h4>';
     require "includes/Api.php";
     
-    echo '<h4>paso3</h4>';
+    use ClashRoyaleAPI\includes\Api;
+
     $api = new Api("players","%238RYPQ9RQG");
 
-    echo '<h4>paso4</h4>';
     $data = $api->apiResult();
 
-    echo '<h4>paso5</h4>';
     // JSON LOCAL
     /*$pathfile = 'json-models/userdata.json';
     $jsonString = file_get_contents($pathfile);
