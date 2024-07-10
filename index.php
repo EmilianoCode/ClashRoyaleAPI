@@ -15,7 +15,7 @@
 
     header('Content-Type: text/html; charset=UTF-8'); 
 
-    use ClashRoyaleAPI\includes\Api;
+    //use ClashRoyaleAPI\includes\Api;
    
     $api = new Api("players","%238RYPQ9RQG");
 
