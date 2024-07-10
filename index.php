@@ -11,12 +11,11 @@
 </head>
 <body>
     <?php 
-    require "includes/Api.php";
-
+  
     header('Content-Type: text/html; charset=UTF-8'); 
-
-    //use ClashRoyaleAPI\includes\Api;
    
+    require "/includes/Api.php";
+
     $api = new Api("players","%238RYPQ9RQG");
 
     $data = $api->apiResult();
