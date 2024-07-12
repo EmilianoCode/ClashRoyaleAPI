@@ -2,6 +2,9 @@
 
     namespace ClashRoyaleAPI\includes;
 
+    require_once('classes/player/Player.php');
+    use ClashRoyaleAPI\includes\classes\player;
+
     class Api {
 
         private $token;
@@ -14,6 +17,7 @@
             $this->category = $category;
             $this->tag = $tag;
             $this->url = "https://api.clashroyale.com/v1/".$this->category."/".$this->tag;
+            
             $this->token = getenv("CRA-TOKEN");
             $this->headers = ["Accept: application/json", "Authorization: Bearer ".$this->token];
         }
@@ -28,10 +32,11 @@
 
             $result = curl_exec($curl_handle);
             $data = json_decode($result,1);
-
             curl_close($curl_handle);
 
-            return $data;
+            $playerData = new Player($data);
+
+            return $playerData;
         }
     }
 ?>
