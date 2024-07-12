@@ -31,8 +31,7 @@
     echo '<h3 style="font-family:Open Sans; font-size: 23px;"> Jugador: '.$data->getName().'</h3>';
     echo '<h3 style="font-family:Open Sans; font-size: 23px;"> Experiencia: '.$data->getExpLevel().'</h3>';
     echo '<h3 style="font-family:Open Sans; font-size: 23px;"> Trofeos: '.$data->getTrophies().'</h3>';
-    echo '<h3 style="font-family:Open Sans; font-size: 23px;"> Partidas ganadas: '.$data["wins"].'</h3>';
-    echo '<h3 style="font-family:Open Sans; font-size: 23px;"> Donaciones: '.$data["totalDonations"].'</h3>';
+
     echo '<h3 style="font-family:Open Sans; font-size: 25px;"> MEJORES INSIGNIAS: </h3>';
     echo '</div>';
     //echo '<div style="width:90%; background:lightgreen; display:flex; flex-wrap:wrap; margin:auto; justify-content:center; border-radius: 20px; margin-top:10px;">';
@@ -47,18 +46,18 @@
     echo '    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">';
     echo '      <div class="accordion-body">';
     echo '          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">';
-    foreach($data["badges"] as $item){
+    foreach($data->getBadges() as $item){
         //echo $item["name"];
         //echo "<br/>";
         //echo $item["iconUrls"]["large"];
-        if($item["level"] > 6){
+        if($item->getLevel() > 6){
             //echo '<img src="'.$item["iconUrls"]["large"].'" style="width: 200px; height: 200px;"/>';
             //echo "<br/>";
             echo '<div class="col">
                     <div class="card h-100">
-                      <img src="'.$item["iconUrls"]["large"].'" class="card-img-top" alt="'.$item["name"].'">
+                      <img src="'.$item->getIconUrl().'" class="card-img-top" alt="'.$item->getName().'">
                       <div class="card-body">
-                        <h5 class="card-title">'.$item["name"].'</h5>
+                        <h5 class="card-title">'.$item->getName().'</h5>
                         <p class="card-text">This is a short card.</p>
                       </div>
                     </div>
