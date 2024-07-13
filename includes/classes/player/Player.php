@@ -8,44 +8,36 @@
     class Player{
 
         // GENERAL PLAYER DATA
-        private $name;
-        private $expLevel;
-        private $trophies;
-        private $bestTrophies;
-        private $totalDonations;
-        private $warDayWins;
-        private $arena;
-        private $starPoints;
-        private $expPoints;
-        private $legacyTrophyRoadHighScore;
-        private $totalExpPoints;
+        private $generalPlayerData;
 
         // BATTLE DATA
-        private $wins;
-        private $losses;
-        private $battleCount;
-        private $threeCrownWins;
+        private $battleData;
         
         // PLAYER BADGES
         private $badges;
 
         public function __construct($data) {
-            $this->name = $data["name"];
-            $this->expLevel = $data["expLevel"];
-            $this->trophies = $data["trophies"];
-            $this->bestTrophies = $data["bestTrophies"];
-            $this->totalDonations = $data["totalDonations"];
-            $this->warDayWins = $data["warDayWins"];
-            $this->arena = $data["arena"];
-            $this->starPoints = $data["starPoints"];
-            $this->expPoints = $data["expPoints"];
-            $this->legacyTrophyRoadHighScore = $data["legacyTrophyRoadHighScore"];
-            $this->totalExpPoints = $data["totalExpPoints"];
-    
-            $this->wins = $data["wins"];
-            $this->losses = $data["losses"];
-            $this->battleCount = $data["battleCount"];
-            $this->threeCrownWins = $data["threeCrownWins"];
+
+            $this->generalPlayerData = [
+                "name" => $data["name"],
+                "expLevel" => $data["expLevel"],
+                "trophies" => $data["trophies"],
+                "bestTrophies" => $data["bestTrophies"],
+                "totalDonations" => $data["totalDonations"],
+                "warDayWins" => $data["warDayWins"],
+                "arena" => $data["arena"],
+                "starPoints" => $data["starPoints"],
+                "expPoints" => $data["expPoints"],
+                "legacyTrophyRoadHighScore" => $data["legacyTrophyRoadHighScore"],
+                "totalExpPoints" => $data["totalExpPoints"]
+            ];
+
+            $this->battleData[
+                "wins" => $data["wins"],
+                "losses" => $data["losses"],
+                "battleCount" => $data["battleCount"],
+                "threeCrownWins" => $data["threeCrownWins"]
+            ]
 
             $this->badges = [];
             foreach ($data["badges"] as $badge) {
@@ -59,64 +51,12 @@
         }
     
         // Métodos getter para todos los atributos
-        public function getName() {
-            return $this->name;
+        public function getGeneralPlayerData(){
+            return $this->$generalPlayerData;    
         }
-    
-        public function getExpLevel() {
-            return $this->expLevel;
-        }
-    
-        public function getTrophies() {
-            return $this->trophies;
-        }
-    
-        public function getBestTrophies() {
-            return $this->bestTrophies;
-        }
-    
-        public function getTotalDonations() {
-            return $this->totalDonations;
-        }
-    
-        public function getWarDayWins() {
-            return $this->warDayWins;
-        }
-    
-        public function getArena() {
-            return $this->arena;
-        }
-    
-        public function getStarPoints() {
-            return $this->starPoints;
-        }
-    
-        public function getExpPoints() {
-            return $this->expPoints;
-        }
-    
-        public function getLegacyTrophyRoadHighScore() {
-            return $this->legacyTrophyRoadHighScore;
-        }
-    
-        public function getTotalExpPoints() {
-            return $this->totalExpPoints;
-        }
-    
-        public function getWins() {
-            return $this->wins;
-        }
-    
-        public function getLosses() {
-            return $this->losses;
-        }
-    
-        public function getBattleCount() {
-            return $this->battleCount;
-        }
-    
-        public function getThreeCrownWins() {
-            return $this->threeCrownWins;
+        
+        public function getBattleData(){
+            return $this->$battleData;    
         }
 
         public function getBadges() {
