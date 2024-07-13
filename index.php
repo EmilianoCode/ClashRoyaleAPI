@@ -13,7 +13,7 @@
     <?php 
     header('Content-Type: text/html; charset=UTF-8');
 
-    require "includes/Api.php";
+    require_once("includes/Api.php");
     
     use ClashRoyaleAPI\includes\Api;
 
