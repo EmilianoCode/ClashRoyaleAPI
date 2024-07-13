@@ -3,7 +3,7 @@
     namespace ClashRoyaleAPI\includes\classes\player;
 
     require_once('Badge.php');
-    use ClashRoyaleAPI\includes\classes\player;
+    use ClashRoyaleAPI\includes\classes\player\Badge;
     
     class Player{
 
@@ -53,7 +53,6 @@
                                             $badge["level"],
                                             $badge["maxLevel"],
                                             $badge["progress"],
-                                            $badge["target"],
                                             $badge["iconUrls"]["large"]);
             }
         }

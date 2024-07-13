@@ -7,16 +7,15 @@
         private $level;
         private $maxLevel;
         private $progress;
-        private $target;
+        //private $target;
         private $iconUrl;
     
         // Constructor que asigna valores a los atributos
-        public function __construct($name, $level, $maxLevel, $progress, $target, $iconUrl) {
+        public function __construct($name, $level, $maxLevel, $progress, $iconUrl) {
             $this->name = $name;
             $this->level = $level;
             $this->maxLevel = $maxLevel;
             $this->progress = $progress;
-            $this->target = $target;
             $this->iconUrl = $iconUrl;
         }
     
@@ -36,11 +35,7 @@
         public function getProgress() {
             return $this->progress;
         }
-    
-        public function getTarget() {
-            return $this->target;
-        }
-    
+        
         public function getIconUrl() {
             return $this->iconUrl;
         }

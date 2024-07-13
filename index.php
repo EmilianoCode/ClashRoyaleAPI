@@ -17,11 +17,11 @@
     
     use ClashRoyaleAPI\includes\Api;
 
+    // API
     $api = new Api("players","%238RYPQ9RQG");
-
     $data = $api->apiResult();
 
-    // JSON LOCAL
+    // LOCAL JSON
     /*$pathfile = 'json-models/userdata.json';
     $jsonString = file_get_contents($pathfile);
     $data = json_decode($jsonString, true);*/

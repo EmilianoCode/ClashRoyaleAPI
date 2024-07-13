@@ -3,7 +3,7 @@
     namespace ClashRoyaleAPI\includes;
 
     require_once('classes/player/Player.php');
-    use ClashRoyaleAPI\includes\classes\player;
+    use ClashRoyaleAPI\includes\classes\player\Player;
 
     class Api {
 
@@ -23,7 +23,7 @@
         }
 
 
-        public function apiResult(){
+        public function apiResult($data){
             $curl_handle =  curl_init($this->url);
             curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $this->headers);
             curl_setopt($curl_handle, CURLOPT_SSL_VERIFYHOST, false);
