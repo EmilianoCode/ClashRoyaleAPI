@@ -32,7 +32,7 @@
                 "totalExpPoints" => $data["totalExpPoints"]
             ];
 
-            $this->battleData[
+            $this->battleData = [
                 "wins" => $data["wins"],
                 "losses" => $data["losses"],
                 "battleCount" => $data["battleCount"],
