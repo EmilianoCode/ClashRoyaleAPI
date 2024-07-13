@@ -23,7 +23,7 @@
         }
 
 
-        public function apiResult($data){
+        public function apiResult(){
             $curl_handle =  curl_init($this->url);
             curl_setopt($curl_handle, CURLOPT_HTTPHEADER, $this->headers);
             curl_setopt($curl_handle, CURLOPT_SSL_VERIFYHOST, false);

@@ -46,7 +46,7 @@
     echo '    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">';
     echo '      <div class="accordion-body">';
     echo '          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">';
-    /*foreach($data->getBadges() as $item){
+    /foreach($data->getBadges() as $item){
         //echo $item["name"];
         //echo "<br/>";
         //echo $item["iconUrls"]["large"];
@@ -64,7 +64,7 @@
                   </div>';
           
         }
-    }*/
+    }
     echo "</div>";
     echo "</div>";
     echo "</div>";
