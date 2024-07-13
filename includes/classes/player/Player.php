@@ -52,11 +52,11 @@
     
         // Métodos getter para todos los atributos
         public function getGeneralPlayerData(){
-            return $this->$generalPlayerData;    
+            return $this->generalPlayerData;    
         }
         
         public function getBattleData(){
-            return $this->$battleData;    
+            return $this->battleData;    
         }
 
         public function getBadges() {
