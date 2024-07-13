@@ -37,9 +37,9 @@
                 "losses" => $data["losses"],
                 "battleCount" => $data["battleCount"],
                 "threeCrownWins" => $data["threeCrownWins"]
-            ]
+            ];
 
-            //$this->badges = [];
+            $this->badges = [];
             foreach ($data["badges"] as $badge) {
                 $this->badges[] = new Badge($badge["name"],
                                             $badge["level"],
