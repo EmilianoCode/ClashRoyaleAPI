@@ -14,10 +14,10 @@
     header('Content-Type: text/html; charset=UTF-8');
     
     require_once("includes/Api.php");
-    require_once("templates/blocks/user_data_block.php")
-
     use ClashRoyaleAPI\includes\Api;
 
+    require_once("templates/blocks/user_data_block.php")
+    
     echo '<div class="container">';
     // API
     $api = new Api("players","%238RYPQ9RQG");
