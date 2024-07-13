@@ -50,7 +50,7 @@
             $this->badges = [];
             foreach ($data["badges"] as $badge) {
                 $this->badges[] = new Badge($badge["name"],
-                                            //$badge["level"],
+                                            $badge["level"],
                                             //$badge["maxLevel"],
                                             $badge["progress"],
                                             //$badge["target"],

@@ -4,16 +4,16 @@
 
     class Badge {
         private $name;
-        //private $level;
+        private $level;
         //private $maxLevel;
         private $progress;
         //private $target;
         private $iconUrl;
     
         // Constructor que asigna valores a los atributos
-        public function __construct($name, /*$level, $maxLevel,*/ $progress, /*$target,*/ $iconUrl) {
+        public function __construct($name, $level, /*$maxLevel,*/ $progress, /*$target,*/ $iconUrl) {
             $this->name = $name;
-            //$this->level = $level;
+            $this->level = $level;
             //$this->maxLevel = $maxLevel;
             $this->progress = $progress;
             //$this->target = $target;
@@ -25,11 +25,11 @@
             return $this->name;
         }
     
-        /*public function getLevel() {
+        public function getLevel() {
             return $this->level;
         }
     
-        public function getMaxLevel() {
+        /*public function getMaxLevel() {
             return $this->maxLevel;
         }*/
     
