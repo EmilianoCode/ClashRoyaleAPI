@@ -18,7 +18,7 @@
 
     use ClashRoyaleAPI\includes\Api;
 
-    echo '<div class="container">TU VIEJA LOCO AAAAAAAAAA';
+    echo '<div class="container">CLASH ROYALE API TRIAL';
     // API
     $api = new Api("players","%238RYPQ9RQG");
     $player = $api->apiResult();
